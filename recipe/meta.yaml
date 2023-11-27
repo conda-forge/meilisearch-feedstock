@@ -1,5 +1,5 @@
 {% set name = "meilisearch" %}
-{% set version = "0.27.2" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,10 @@ package:
 
 source:
   url: https://github.com/meilisearch/meilisearch/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d2e912778e6865fd98d59258a07573dcd15515373f057f4e7a967217f5dd61ec
+  sha256: 82209896c9aae0d75441efeb1ac477c245033bce859d96af3bf740c7c0d8b012
 
 build:
+  skip: True  # [(ppc64le or osx) and not arm64]
   number: 0
 
 requirements:
@@ -23,6 +24,8 @@ test:
   commands:
     - meilisearch --help
     - meilisearch --version
+    - meilitool --help
+    - meilitool --version
 
 about:
   home: https://www.meilisearch.com/

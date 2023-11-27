@@ -6,3 +6,4 @@ cargo build --release --locked
 
 mkdir -p $PREFIX/bin/
 mv ./target/*/release/meilisearch $PREFIX/bin/meilisearch
+mv ./target/*/release/meilitool $PREFIX/bin/meilitool

@@ -23,6 +23,8 @@ test:
   commands:
     - meilisearch --help
     - meilisearch --version
+    - meilitool --help
+    - meilitool --version
 
 about:
   home: https://www.meilisearch.com/

@@ -1,5 +1,5 @@
 {% set name = "meilisearch" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/meilisearch/meilisearch/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1c13850d1735aaaad6e3ff0281ae8ea5868c6a08de04c2c3ee163cadf1dcb434
+  sha256: 0727a89ddb07a9ae458cfd6bd8e94916206a3775edc97416b17ab7387c3abdb4
 
 build:
   skip: true  # [ppc64le]
